@@ -1,0 +1,368 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(NanumPenScript-Regular.ttf);
+    font-family: Nanum;
+}
+
+/* Root Variables */
+:root {
+    --primary-bg: #2A9D8F;
+    --secondary-bg: #264653;
+    --highlight-color: #F4A261;
+    --text-color: #E9C46A;
+    --card-bg: rgba(20, 20, 20, 0.8);
+    --header-bg-gradient: linear-gradient(to right, #264653, #F4A261);
+}
+
+/* Body Styling */
+body {
+    padding-bottom: 70px;
+    background-image: url('Alicization.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: Nanum, Arial, sans-serif;
+}
+
+/* Overview Styling */
+.overview {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.overview h2 {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.overview p {
+    background-color: rgba(24, 23, 23, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.overview blockquote {
+    font-style: italic;
+    color: var(--highlight-color);
+    border-left: 5px solid var(--highlight-color);
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Story Breakdown Styling */
+.story-breakdown {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.story-breakdown h2 {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.story-breakdown p {
+    background-color: rgba(24, 23, 23, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.story-breakdown blockquote {
+    font-style: italic;
+    color: var(--highlight-color);
+    border-left: 5px solid var(--highlight-color);
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Major Characters Styling */
+.characters {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.characters h2 {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.character {
+    margin-bottom: 30px;
+}
+
+.character h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-bg);
+    margin-bottom: 10px;
+}
+
+.character p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.character p strong {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+.character p:last-child {
+    margin-bottom: 0;
+}
+
+/* Header Styling */
+.header {
+    background: var(--header-bg-gradient);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: var(--highlight-color);
+    font-size: 3rem;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-bg);
+    padding: 15px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--highlight-color);
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Sections Styling */
+section {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Animation Classes */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fade-in 1.5s ease-out forwards;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slide-in 1s ease-out forwards;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scale-in {
+    animation: scale-in 1s ease-out forwards;
+}
+
+@keyframes scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Arc Images Styling */
+.arc-images {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.arc-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* For Small Devices (Mobile) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .overview h2,
+    .story-breakdown h2,
+    .characters h2 {
+        font-size: 2rem;
+    }
+
+    .arc-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arc-image {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For Medium Devices (Tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .navbar {
+        flex-direction: row;
+        padding: 15px;
+    }
+
+    .navbar a {
+        margin: 0 15px;
+        font-size: 1.2rem;
+    }
+
+    section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .overview h2,
+    .story-breakdown h2,
+    .characters h2 {
+        font-size: 2.3rem;
+    }
+
+    .arc-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arc-image {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For Large Devices (Desktops) */
+@media (min-width: 769px) {
+    .header h1 {
+        font-size: 3.5rem;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .navbar a {
+        margin: 0 20px;
+        font-size: 1.3rem;
+    }
+
+    section {
+        width: 85%;
+        padding: 25px;
+    }
+
+    .overview h2,
+    .story-breakdown h2,
+    .characters h2 {
+        font-size: 2.5rem;
+    }
+
+    .arc-images {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .arc-image {
+        width: 48%;
+    }
+}

@@ -1,0 +1,167 @@
+/* Define Color Palette */
+:root {
+    --primary-bg: #E9C46A; /* First Color - Background */
+    --secondary-bg: #2A9D8F; /* Second Color - Secondary Background */
+    --accent-color: #F4A261; /* Third Color - Accent */
+    --text-color: #264653; /* Text color for readability */
+    --highlight-color: #E76F51; /* Highlight color for links, buttons, etc. */
+}
+
+/* Universal Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    src: url(NanumPenScript-Regular.ttf);
+    font-family: Nanum;
+}
+
+body {
+    font-family: Nanum, Arial, sans-serif;
+    background: linear-gradient(to right, var(--primary-bg), var(--secondary-bg));
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: Nanum, Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: var(--secondary-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: var(--text-color);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 107, 95, 0.2);
+    color: var(--highlight-color);
+    transform: scale(1.1);
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.navbar a:active {
+    color: var(--accent-color);
+}
+
+/* Contact Page Styles */
+/* Contact Form Layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; /* Add space between form fields */
+    max-width: 500px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the form */
+}
+
+/* Form Input Fields */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%; /* Ensure inputs take full width of container */
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Textarea Specific Styles */
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 150px; /* Set minimum height for the textarea */
+}
+
+/* Button Styling */
+.contact-form button {
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effects */
+.contact-form button:hover {
+    background-color: var(--highlight-color);
+    transform: scale(1.05);
+}
+
+/* Label Styling */
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+    color: var(--text-color);
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 8px 5px;
+    }
+
+    .contact-section {
+        padding: 20px;
+        width: 90%; /* Form will take up 90% of screen width */
+    }
+
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form {
+        align-items: flex-start;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 0.9rem;
+        max-width: 100%; /* Inputs and button take full width */
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+}

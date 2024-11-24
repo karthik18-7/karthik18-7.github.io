@@ -1,0 +1,54 @@
+.navbar a {
+    color: var(--text-color);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--highlight-color);
+}
+
+
+
+
+
+/* Header Styling */
+.header {
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center align the links */
+    align-items: center; /* Vertically center the items */
+    padding: 15px 0; /* Space out the links */
+    background-color: var(--secondary-bg); /* Background color of navbar */
+}
+
+.navbar a {
+    color: var(--text-color); /* Text color */
+    margin: 0 20px; /* Add spacing between links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease; /* Smooth transition for color, size, and transform */
+}
+
+.navbar a:hover {
+    color: var(--highlight-color); /* Highlight color on hover */
+    transform: scale(1.1); /* Slightly increase the size of the link on hover */
+    font-size: 1.2rem; /* Increase font size on hover */
+}
+
+.navbar a:active {
+    color: var(--accent-color); /* Change color when the link is clicked */
+}

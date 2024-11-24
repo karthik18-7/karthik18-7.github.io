@@ -1,0 +1,141 @@
+/* Define Color Palette for Blue Lock Page */
+:root {
+    --primary-bg: #001f3f; /* Dark Blue for Background */
+    --secondary-bg: #005f99; /* Blue accent color */
+    --highlight-color: #ff6b5f; /* Same highlight as general palette */
+    --text-color: #ffffff; /* White for readability */
+    --card-bg: #003366; /* Darker shade for anime cards */
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen {
+    section{
+        width:100%
+    }    
+}
+
+@font-face {
+    src: url(NanumPenScript-Regular.ttf);
+    font-family: Nanum;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Nanum', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    background-color: var(--secondary-bg);
+    padding: 15px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--highlight-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--secondary-bg);
+}
+
+.navbar a {
+    color: var(--text-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--highlight-color);
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Overview Section */
+.overview {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.overview h2 {
+    color: var(--highlight-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.overview p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 100%; /* Ensures text fits within container */
+    overflow-wrap: break-word; /* Breaks long words to prevent overflow */
+    white-space: normal; /* Prevents long continuous text from overflowing */
+    font-family: Nanum;
+}
+
+
+/* Anime Card Styling */
+.anime-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.anime-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+.anime-card p {
+    padding: 10px;
+    font-weight: bold;
+    color: var(--highlight-color);
+    text-align: center;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--secondary-bg);
+    padding: 10px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-top: 30px;
+}

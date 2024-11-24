@@ -1,0 +1,275 @@
+/* Define Color Palette */
+:root {
+    --primary-bg: #E9C46A; /* First Color - Background */
+    --secondary-bg: #2A9D8F; /* Second Color - Secondary Background */
+    --accent-color: #F4A261; /* Third Color - Accent */
+    --text-color: #264653; /* Text color for readability */
+    --highlight-color: #E76F51; /* Highlight color for links, buttons, etc. */
+} 
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@media screen {
+    section{
+        width:100%
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically on smaller screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Make sidebar take full width on smaller screens */
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar ul li a {
+        font-size: 1rem; /* Reduce font size for mobile */
+    }
+
+    .search-bar {
+        width: 80%; /* Make the search bar more responsive */
+    }
+
+    .anime-card img {
+        width: 100%; /* Make images more flexible for smaller screens */
+    }
+
+    .featured-grid, .popular-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust grid for smaller screens */
+    }
+}
+
+@font-face {
+    src: url(NanumPenScript-Regular.ttf);
+    font-family: Nanum;
+}
+
+/* Body Styling */
+body {
+    font-family: Nanum, Arial, sans-serif;
+    background: linear-gradient(to right, var(--primary-bg), var(--secondary-bg)); /* Gradient for body */
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Featured and Popular Section Background */
+.featured, .popular {
+    background-color: rgba(255, 255, 255, 0.644); /* Less transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Header Styling */
+.header {
+    background-color: var(--secondary-bg);
+    padding: 20px 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px #dbb5faa4;
+}
+
+.header h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--accent-color);
+    font-family: Nanum, Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Horizontal Line Styling */
+.header hr {
+    width: 80%; /* Width of the line */
+    border: 0; /* Remove default border style */
+    border-top: 2px solid var(--highlight-color); /* Create a solid line */
+    margin: 10px auto; /* Center the line and add spacing */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center align the links */
+    align-items: center; /* Vertically center the items */
+    padding: 15px 0; /* Space out the links */
+    background-color: var(--secondary-bg); /* Background color of navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    color: var(--text-color); /* Text color */
+    margin: 0 20px; /* Add spacing between links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, font-size 0.3s ease; /* Smooth transition for color, size, and transform */
+}
+
+.navbar a:hover {
+    background-color: rgba(255,107,95,0.2);
+    color: var(--highlight-color); /* Highlight color on hover */
+    transform: scale(1.1); /* Slightly increase the size of the link on hover */
+    font-size: 1.2rem; /* Increase font size on hover */
+    text-decoration: underline;
+}
+
+.navbar a:active {
+    color: var(--accent-color); /* Change color when the link is clicked */
+}
+
+
+/* Search Bar Section Styling */
+.search-section {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(216, 211, 211, 0.8); /* Light background for the section */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for the section */
+    margin-bottom: 30px;
+}
+
+/* Search Bar Input Field */
+.search-bar {
+    padding: 12px 20px;
+    width: 60%; /* Adjust the width based on the screen size */
+    font-size: 1.2rem;
+    border-radius: 30px; /* Rounded edges */
+    border: 2px solid var(--accent-color); /* Accent color for the border */
+    background-color: #f4f4f4; /* Subtle background for the input field */
+    color: var(--text-color); /* Text color */
+    transition: all 0.3s ease; /* Smooth transition for hover and focus effects */
+}
+
+/* Focused State for Search Bar */
+.search-bar:focus {
+    outline: none; /* Remove default outline */
+    border-color: var(--highlight-color); /* Change border color on focus */
+    background-color: #ffffff; /* Lighter background on focus */
+    box-shadow: 0 0 8px rgba(231, 111, 81, 0.6); /* Soft shadow around input when focused */
+}
+
+/* Placeholder Styling */
+.search-bar::placeholder {
+    color: var(--text-color); /* Placeholder color matches the text color */
+    font-style: italic; /* Slightly italicized placeholder text */
+}
+
+/* Adjust Search Bar for Mobile Screens */
+@media screen and (max-width: 768px) {
+    .search-bar {
+        width: 80%; /* Make the search bar wider on smaller screens */
+    }
+}
+
+
+/* Featured and Popular Sections */
+main {
+    padding: 20px;
+}
+
+h2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.featured-grid, .popular-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.navbar a:focus, .sidebar ul li a:focus {
+    outline: 3px solid var(--highlight-color); /* Custom focus outline for better accessibility */
+}
+
+section, .featured, .popular {
+    padding: 20px;
+}
+
+
+.anime-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.anime-card p {
+    margin-top: 5px;
+    color: var(--highlight-color);
+    font-weight: bold;
+    font-size: larger;
+}
+
+/* Footer styling */
+.footer {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+    width: 100%;
+}
+
+/* Navigation Sidebar */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: var(--primary-bg); /* Matches body background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    border-right: 2px solid var(--secondary-bg); /* Adds some separation */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--secondary-bg); /* Secondary background on hover */
+    color: var(--highlight-color);
+    cursor: pointer;
+}
+
+.anime-card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.anime-card:hover {
+    transform: scale(1.05);
+}
+
+.anime-card img:hover {
+    transform: scale(1.1); /* Enlarge the image by 10% on hover */
+}

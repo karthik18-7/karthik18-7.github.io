@@ -1,0 +1,186 @@
+/* Define Color Palette */
+:root {
+    --primary-bg: #E9C46A; /* First Color - Background */
+    --secondary-bg: #2A9D8F; /* Second Color - Secondary Background */
+    --accent-color: #F4A261; /* Third Color - Accent */
+    --text-color: #264653; /* Text color for readability */
+    --highlight-color: #E76F51; /* Highlight color for links, buttons, etc. */
+}
+
+/* Universal Styles (Shared between pages) */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    src: url(NanumPenScript-Regular.ttf);
+    font-family: Nanum;
+}
+
+body {
+    font-family: Nanum, Arial, sans-serif;
+    background: linear-gradient(to right, var(--primary-bg), var(--secondary-bg));
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: Nanum, Arial, sans-serif;
+}
+
+/* Header Styling */
+.header {
+    background-color: var(--secondary-bg);
+    padding: 20px 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px #dbb5faa4;
+}
+
+.header h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.header hr {
+    width: 80%;
+    border: 0;
+    border-top: 2px solid var(--highlight-color);
+    margin: 10px auto;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: var(--secondary-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: var(--text-color);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 107, 95, 0.2);
+    color: var(--highlight-color);
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.navbar a:active {
+    color: var(--accent-color);
+}
+
+/* Genres Page Styles */
+
+/* Introduction Section */
+.intro {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Genres Grid */
+.genres {
+    padding: 20px;
+    text-align: center;
+}
+
+.genre-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.genre-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.genre-card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.genre-card p {
+    margin-top: 5px;
+    color: var(--highlight-color);
+    font-weight: bold;
+    font-size: larger;
+}
+
+.genre-card:hover {
+    transform: scale(1.05);
+}
+
+.genre-card img:hover {
+    transform: scale(1.1);
+}
+
+main {
+    padding: 20px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 8px 5px;
+    }
+
+    .genre-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .genre-card img {
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .intro {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+}

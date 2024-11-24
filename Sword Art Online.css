@@ -1,0 +1,196 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Styles */
+@font-face {
+    src: url('NanumPenScript-Regular.ttf');
+    font-family: Nanum;
+    font-display: swap;
+}
+
+@font-face {
+    src: url('YourLieInAprilScript.ttf'); /* Custom font for a musical feel */
+    font-family: MusicFont;
+    font-display: swap;
+}
+
+/* Root Variables */
+:root {
+    --primary-bg: #2A9D8F; /* Teal for primary background */
+    --secondary-bg: #264653; /* Dark blue for secondary background */
+    --highlight-color: #F4A261; /* Light orange for highlights */
+    --text-color: #E9C46A; /* Warm yellow for text */
+    --card-bg: rgba(20, 20, 20, 0.8); /* Dark card background with slight transparency */
+}
+
+/* Body Styling */
+body {
+
+    background-image: url('SAO.webp'); /* Dark and moody image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    font-family: Nanum, Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+/* Header Styling */
+.header {
+    background: linear-gradient(to right, #264653, #F4A261); /* Dark blue to Light orange gradient */
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: var(--highlight-color);
+    font-family: Nanum, MusicFont, Arial, sans-serif; /* Custom font for title */
+    font-size: 2.8rem;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-bg);
+    padding: 15px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--highlight-color);
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Overview Section Styling */
+.overview {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.overview h2 {
+    color: var(--highlight-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.overview p {
+    text-align: justify;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Arcs Section Styling */
+.arcs {
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.arcs h2 {
+    color: var(--highlight-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.arc {
+    margin-bottom: 15px;
+}
+
+.arc h3 {
+    font-size: 1.4rem;
+    color: var(--secondary-bg);
+}
+
+.arc p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+/* Characters Section Styling */
+.characters {
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.characters h2 {
+    color: var(--highlight-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.character {
+    margin-bottom: 15px;
+}
+
+.character h3 {
+    font-size: 1.4rem;
+    color: var(--secondary-bg);
+}
+
+.character p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .overview, .arcs, .characters {
+        width: 95%;
+    }
+    .navbar a {
+        font-size: 1.1rem;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+}

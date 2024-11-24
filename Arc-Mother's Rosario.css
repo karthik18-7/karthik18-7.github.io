@@ -1,0 +1,251 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    src: url(NanumPenScript-Regular.ttf);
+    font-family: Nanum;
+}
+
+/* Root Variables */
+:root {
+    --primary-bg: #2A9D8F;
+    --secondary-bg: #264653;
+    --highlight-color: #F4A261;
+    --text-color: #E9C46A;
+    --card-bg: rgba(20, 20, 20, 0.8);
+    --header-bg-gradient: linear-gradient(to right, #264653, #F4A261);
+}
+
+/* Body Styling */
+body {
+    padding-bottom: 70px;
+    background-image: url('MRA.jpg'); /* Update with a background image for this arc */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: Nanum, Arial, sans-serif;
+}
+
+/* Header Styling */
+.header {
+    background: var(--header-bg-gradient);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: var(--highlight-color);
+    font-size: 3rem;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-bg);
+    padding: 15px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--highlight-color);
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.navbar a.active {
+    color: var(--highlight-color);
+}
+
+/* Overview Section Styling */
+.overview {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.overview h2 {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.overview p {
+    background-color: rgba(24, 23, 23, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Story Breakdown Styling */
+.story-breakdown {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.story-breakdown h2 {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.story-breakdown p {
+    background-color: rgba(24, 23, 23, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Major Characters Section */
+.characters {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.characters h2 {
+    color: var(--highlight-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.character {
+    margin-bottom: 30px;
+}
+
+.character h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-bg);
+    margin-bottom: 10px;
+}
+
+.character p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Images Section Styling */
+.arc-images {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    align-content: center;
+}
+
+.arc-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* For Small Devices (Mobile) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .arc-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arc-image {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For Medium Devices (Tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .navbar {
+        flex-direction: row;
+        padding: 15px;
+    }
+
+    .navbar a {
+        margin: 0 15px;
+        font-size: 1.2rem;
+    }
+
+    .arc-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arc-image {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For Large Devices (Desktops) */
+@media (min-width: 769px) {
+    .header h1 {
+        font-size: 3.5rem;
+    }
+
+    .navbar a {
+        margin: 0 20px;
+        font-size: 1.3rem;
+    }
+
+    .arc-images {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .arc-image {
+        width: 48%;
+    }
+}

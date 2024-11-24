@@ -1,0 +1,186 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen {
+    section{
+        width:100%
+    }    
+}
+
+@media (max-width: 768px) {
+    .overview, .arcs, .characters {
+        width: 95%;
+    }
+}
+
+    @font-face {
+        src: url(NanumPenScript-Regular.ttf);
+        font-family: Nanum;
+        font-display: swap;
+    }
+
+/* Root Variables */
+:root {
+    --primary-bg: #f0e68c; /* Light yellow background for the body */
+    --secondary-bg: #ff7f50; /* Naruto's signature orange color */
+    --highlight-color: #ff7f50; /* Highlight color for links, buttons */
+    --text-color: #333; /* Dark gray text color */
+    --card-bg: #ffffff; /* White background for sections */
+    --footer-bg: #333; /* Dark background for footer */
+}
+
+/* Body Styling */
+body {
+
+    background-image: url('Naruto1.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Makes the image stay fixed during scrolling */
+
+    background-color: var(--primary-bg);
+    font-family: Nanum, Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header Styling */
+.header {
+    background-color: var(--secondary-bg);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--footer-bg);
+    padding: 15px;
+}
+
+.navbar a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--highlight-color);
+    transform: scale(1.1);
+}
+
+/* Overview Section Styling */
+.overview {
+    font-family: Nanum, Arial, sans-serif;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.overview h2 {
+    font-family: Nanum, Arial, sans-serif;
+    color: var(--highlight-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.overview p {
+    text-align: justify;
+    font-family: Nanum, Arial, sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Arcs Section Styling */
+.arcs {
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+.arcs h2 {
+    color: var(--highlight-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.arc {
+    margin-bottom: 15px;
+}
+
+.arc h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.arc p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+/* Characters Section Styling */
+.characters {
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+.characters h2 {
+    color: var(--highlight-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.character {
+    margin-bottom: 15px;
+}
+
+.character h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.character p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--footer-bg);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
